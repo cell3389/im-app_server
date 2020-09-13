@@ -77,7 +77,7 @@ public class ServiceImpl implements Service {
     @PostConstruct
     private void init() {
         ChatConfig.initAdmin(mIMConfig.admin_url, mIMConfig.admin_secret);
-        rateLimiter = new RateLimiter(60, 200);
+        rateLimiter = new RateLimiter(60, 3000);
     }
 
     private String getIp() {
